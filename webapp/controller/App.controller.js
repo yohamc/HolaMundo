@@ -1,14 +1,13 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast"
+], function (Controller, MessageToast) {
 	"use strict";
 
 	return Controller.extend("LogaliUI5/HolaMundo.controller.App", {
 
 		onShowHello: function () {
-			/*eslint-disable no-alert*/
-			alert("Hello Word");
-			/*eslint-enable no-alert*/
+			MessageToast.show("Hello Word");
 		}
 	});
 });
