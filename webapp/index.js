@@ -1,15 +1,12 @@
 sap.ui.define([
-		"sap/m/Text"
+		"sap/ui/core/mvc/XMLView"
 	],
 
-	// function () {
-	// 	/*eslint-disable no-alert */
-	// 	alert("UI cargado");
-	// 	/*eslint-enable no-alert */
-	// });
-
-	function (Text) {
-		new Text({
-			text: "Hello Word!"
-		}).placeAt("content");
+	function (XMLView) {
+		
+		XMLView.create({
+			viewName: "LogaliUI5.HolaMundo.view.App"
+		}).then(function (oView){ 
+			oView.placeAt("content"); 
+		});
 	});
